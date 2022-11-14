@@ -18,6 +18,8 @@ module MyAddr::MyLibrary {
         move_to(account, Library { books });
     }
 
+    // Because the script function cannot have return value,
+    // query only can be done by: state get resource Address Address::Module::Resource
     public fun add_book(account: &signer, name: vector<u8>, link: vector<u8>) acquires Library {
         let lib = borrow_global_mut<Library>(Signer::address_of(account));
         let id = Vector::length(&lib.books);
