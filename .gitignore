@@ -1,2 +1,5 @@
-book
+.aptos/
 .idea/
+book/
+build/
+release/

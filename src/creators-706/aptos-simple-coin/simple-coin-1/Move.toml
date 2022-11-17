@@ -1,0 +1,10 @@
+[package]
+name = 'simple-coin-1'
+version = '1.0.0'
+[dependencies.AptosFramework]
+git = 'https://github.com/aptos-labs/aptos-core.git'
+rev = 'main'
+subdir = 'aptos-move/framework/aptos-framework'
+
+[addresses]
+my_address ="0x9ac5e69d07766b31933bf6cdb7bb0c78095b5e2866164ba90b9a604dfc11e410"
