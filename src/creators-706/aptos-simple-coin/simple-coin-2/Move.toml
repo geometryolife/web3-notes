@@ -1,0 +1,11 @@
+[package]
+name = 'simple-coin-2'
+version = '1.0.0'
+[dependencies.AptosFramework]
+git = 'https://github.com/aptos-labs/aptos-core.git'
+rev = 'main'
+subdir = 'aptos-move/framework/aptos-framework'
+
+[addresses]
+my_address ="0x9ac5e69d07766b31933bf6cdb7bb0c78095b5e2866164ba90b9a604dfc11e410"
+receiver = "0x5f7d5f85125ccfde8331f45e1dd3b9e4145a5b218b23711a90667713db484d36"

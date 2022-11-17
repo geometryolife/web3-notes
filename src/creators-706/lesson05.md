@@ -83,7 +83,7 @@ aptos move publish --named-addresses simple_coin_1=0x9ac5e69d07766b31933bf6cdb7b
 aptos move run --function-id <ADDRESS>::<MODULE_NAME>::<FUNCTION_NAME> --private-key-file <PRIVATE_KEY_FILE_PATH> --url http://127.0.0.1:8080
 
 # For example
-aptos move run --function-id 0x9ac5e69d07766b31933bf6cdb7bb0c78095b5e2866164ba90b9a604dfc11e410::SimpleCoin::issue --private-key-file ../../aptos-account/alice --url http://127.0.0.1:8080
+aptos move run --function-id 0x9ac5e69d07766b31933bf6cdb7bb0c78095b5e2866164ba90b9a604dfc11e410::SimpleCoin2::issue --private-key-file ../../aptos-account/alice --url http://127.0.0.1:8080
 ```
 
 ## 如何发币
