@@ -1,4 +1,4 @@
-# NFT 合约与 DApp 的实现
+# FT 合约与 DApp 的实现
 
 - Aptos 命令行工具使用
 - 如何使用 managed——coin 发币
@@ -28,7 +28,7 @@ aptos node run-local-testnet --force-restart --with-faucet
 # 生成公钥、私钥文件
 aptos key generate --output-file <IDENTITY>
 
-# For example
+# 【For example】
 aptos key generate --output-file ../aptos-account/alice
 aptos key generate --output-file ../aptos-account/bob
 ```
@@ -46,7 +46,7 @@ Petra 钱包：https://chrome.google.com/webstore/detail/petra-aptos-wallet/ejjl
 ```shell
 curl --location --request POST 'http://127.0.0.1:8081/mint?amount=<AMOUNT>&address=<ADDRESS>'
 
-# For example
+# 【For example】
 curl --location --request POST 'http://127.0.0.1:8081/mint?amount=100000000&address=0x9ac5e69d07766b31933bf6cdb7bb0c78095b5e2866164ba90b9a604dfc11e410'
 curl --location --request POST 'http://127.0.0.1:8081/mint?amount=100000000&address=0x5f7d5f85125ccfde8331f45e1dd3b9e4145a5b218b23711a90667713db484d36'
 ```
@@ -55,8 +55,12 @@ curl --location --request POST 'http://127.0.0.1:8081/mint?amount=100000000&addr
 
 ```shell
 # 新建 move 项目
-mkdir <PROJECT_NAME> && <PROJECT_NAME>
+mkdir <PROJECT_NAME> && cd <PROJECT_NAME>
 aptos move init --name <PROJECT_NAME>
+
+# 【For example】
+mkdir aptos-simple-coin && cd aptos-simple-coin
+aptos move init --name aptos-simple-coin
 ```
 
 ```shell
@@ -73,7 +77,7 @@ aptos move test
 # 部署合约
 aptos move publish --named-addresses <NAMED_ADDRESSES>=<ADDRESS> --private-key-file <PRIVATE_KEY_FILE_PATH> --url http://127.0.0.1:8080
 
-# For example
+# 【For example】
 aptos move publish --named-addresses simple_coin_1=0x9ac5e69d07766b31933bf6cdb7bb0c78095b5e2866164ba90b9a604dfc11e410 --private-key-file ../../aptos-account/alice --url http://127.0.0.1:8080
 ```
 
@@ -82,7 +86,7 @@ aptos move publish --named-addresses simple_coin_1=0x9ac5e69d07766b31933bf6cdb7b
 <FUNCTION_ID> => <ADDRESS>::<MODULE_NAME>::<FUNCTION_NAME>
 aptos move run --function-id <ADDRESS>::<MODULE_NAME>::<FUNCTION_NAME> --private-key-file <PRIVATE_KEY_FILE_PATH> --url http://127.0.0.1:8080
 
-# For example
+# 【For example】
 aptos move run --function-id 0x9ac5e69d07766b31933bf6cdb7bb0c78095b5e2866164ba90b9a604dfc11e410::SimpleCoin2::issue --private-key-file ../../aptos-account/alice --url http://127.0.0.1:8080
 ```
 
