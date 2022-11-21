@@ -21,12 +21,18 @@
 public (script) fun checkpoint_entry(_account: signer) acquires BlockMetadata, Checkpoints
 ```
 
+- `update_state_root_entry`
+  - 调用 `update_state_root`
+
+```shell
+public (script) fun update_state_root_entry(_account: signer , header: vector<u8>) acquires Checkpoints
+```
+
 ## Function
 
 - `checkpoint`
   - `parent_block_number` 获取父块高度
   - `parent_block_hash` 父块哈希
   - `checkpoints` <++>
-
   - `base_checkpoint(checkpoints, parent_block_number, parent_block_hash)`
 
