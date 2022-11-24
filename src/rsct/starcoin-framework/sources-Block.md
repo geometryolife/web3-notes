@@ -25,7 +25,7 @@ public (script) fun checkpoint_entry(_account: signer) acquires BlockMetadata, C
   - 调用 `update_state_root`
 
 ```shell
-public (script) fun update_state_root_entry(_account: signer , header: vector<u8>) acquires Checkpoints
+public (script) fun update_state_root_entry(_account: signer, header: vector<u8>) acquires Checkpoints
 ```
 
 ## Function
